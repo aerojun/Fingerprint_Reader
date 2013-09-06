@@ -3,7 +3,7 @@ Lector de Huellas digitales con Arduino.
 
 Autor de las librerias usadas:
 ------------------------------
-http://wordpress.hawleyhosting.com/ramblings/?p=375
+Finger Print Scanner (GT-511C3) Library - A Tinkerer's Ramblings [1]_
 
 -------------------------------------------------
 
@@ -12,7 +12,7 @@ Fingerprint Scanner with Arduino.
 
 Author of the libs:
 -------------------
-http://wordpress.hawleyhosting.com/ramblings/?p=375
+Finger Print Scanner (GT-511C3) Library - A Tinkerer's Ramblings [1]_
 
 
 
@@ -20,6 +20,8 @@ Devices:
 --------
 -Arduino UNO
 
--Fingerprint Scanner - TTL (GT-511C3) (Sparkfun) [1]_
+-Fingerprint Scanner - TTL (GT-511C3) (Sparkfun) [2]_
 
-.. [1] https://www.sparkfun.com/products/11792
+.. [1] http://wordpress.hawleyhosting.com/ramblings/?p=375
+
+.. [2] https://www.sparkfun.com/products/11792
