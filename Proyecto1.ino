@@ -62,8 +62,8 @@ void Digitalizar()
 	fps.EnrollStart(enrollid);
 
 	// Guardar huella
-	Serial.print("Ponga su huella digital: ");
-	Serial.println(enrollid);
+	Serial.println("Ponga su huella digital");
+	//Serial.println(enrollid);
 	while(fps.IsPressFinger() == false) delay(100);
 	bool bret = fps.CaptureFinger(true);
 	int iret = 0;
@@ -86,7 +86,7 @@ void Digitalizar()
 			while(fps.IsPressFinger() == true) delay(100);
                         delay(1000);
                         
-			Serial.println("Vuelva a poner su huella");
+			Serial.println("Volver a poner su huella");
 			while(fps.IsPressFinger() == false) delay(100);
 			bret = fps.CaptureFinger(true);
 
@@ -96,37 +96,51 @@ void Digitalizar()
 				iret = fps.Enroll3();
 				if (iret == 0)
 				{
-					Serial.println("Huella grabada satiscatoriamente");
+					Serial.println("1");
                                         Serial.println(enrollid);
 				}
 				else
 				{
-					Serial.print("Fallo la digitalizacion");
+					Serial.println("Fallo la digitalizacion");
+                                        Serial.println("0");
 				}
 			}
-			else Serial.println("Imposible capturar por tercera vez");
+			else 
+                        {
+                          Serial.println("Imposible capturar por tercera vez");
+                          Serial.println("0");
+                        }
 		}
-		else Serial.println("Imposible capturar por segunda vez");
+		else
+                {
+                  Serial.println("Imposible capturar por segunda vez");
+                  Serial.println("0");
+                }
 	}
-	else Serial.println("Imposible capturar");
+	else
+        {
+          Serial.println("Imposible capturar");
+          Serial.println("0");
+        }
 }
 
 void Verificar()
 {
    Serial.println("Favor de colocar su huella");
 	// Identificar Huella
+  while(fps.IsPressFinger() == false) delay(100);
 	if (fps.IsPressFinger())
 	{
 		fps.CaptureFinger(true);
 		int id = fps.Identify1_N();
 		if (id <200)
 		{
-			Serial.print("ID Verfificado:");
+			Serial.println("1");
 			Serial.println(id);
 		}
 		else
 		{
-			Serial.println("No se encontro la huella");
+			Serial.println("0");
                         Serial.println(id);
 		}
 	}
