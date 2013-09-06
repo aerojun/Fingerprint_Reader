@@ -20,6 +20,6 @@ Devices:
 --------
 -Arduino UNO
 
--Fingerprint Scanner - TTL (GT-511C3) (Sparkfun)[1]_
+-Fingerprint Scanner - TTL (GT-511C3) (Sparkfun) [1]_
 
 .. [1] https://www.sparkfun.com/products/11792
